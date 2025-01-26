@@ -20,7 +20,7 @@ In cases where it cannot, we must **annotate**:
 A number without a fractional component.
 
 |           **Integer Types**            |
-| -------------------------------------- |
+| ---------- | ---------- | ------------ |
 | **Length** | **Signed** | **Unsigned** |
 | ---------- | ---------- | ------------ |
 | 8-bit      | `i8`       | `u8`         |
@@ -46,6 +46,7 @@ Unsigned variants can store numbers from 0 to ((2^n)-1).
 Integer literals can be written in any of the following forms:
 
 | **Number literals** | **Example**   |
+| ------------------- | ------------- |
 | Decimal             | `98_222`      |
 | Hex                 | `0xff`        |
 | Octal               | `0o77`        |
