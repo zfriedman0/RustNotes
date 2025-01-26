@@ -30,20 +30,20 @@ A number without a fractional component.
 
 Each variant can be either signed or unsigned.
     
-    - Refers to whether it's possible for a number to be negative.
-        - Signed numbers are stored using two's complement representation.
+- Refers to whether it's possible for a number to be negative.
+    - Signed numbers are stored using two's complement representation.
 
 Signed variants can store numbers from -(2^(n-1)) to (2^(n-1)-1) inclusive, where *n* is the number of bits that variant uses.
     
-    - `i8` can store from -(2^(7)) to ((2^7)-1) numbers (-128 to 127).
+- `i8` can store from -(2^(7)) to ((2^7)-1) numbers (-128 to 127).
 
 Unsigned variants can store numbers from 0 to ((2^n)-1).
     
-    - `u8` can store from 0 to ((2^8)-1) numbers (0 to 255).
+- `u8` can store from 0 to ((2^8)-1) numbers (0 to 255).
 
 `isize` and `usize` depend on the architecture of the system the program is running on.
     
-    - 64 bits if on 64-bit architecture, 32 bits if on 32-bit architecture.
+- 64 bits if on 64-bit architecture, 32 bits if on 32-bit architecture.
 
 Integer literals can be written in any of the following forms:
 
@@ -59,16 +59,16 @@ Number literals that can be multiple numeric types allow a type suffix, such as 
 
 Number literals can also use a `_` as a visual separator to make it easier to read.
     
-    - `1_000` will have the same value as `1000`.
+- `1_000` will have the same value as `1000`.
 
 If you're unsure what type to use, Rust's defaults are a good place to start: integer types default to `i32`.
     
-    - The primary situation in which you'd use `isize` and `usize` is when indexing some sort of collection.
+- The primary situation in which you'd use `isize` and `usize` is when indexing some sort of collection.
 
 ### Floating-Point Types
 Rust has two primitive types for floating-point numbers, which are numbers with decimal points.
     
-    - `f32` and `f64`, which are 32 bits and 64 bits in size respectively.
+- `f32` and `f64`, which are 32 bits and 64 bits in size respectively.
 
 `f64` is default, since it is roughly the same speed as `f32` and offers more precision.
 
@@ -130,11 +130,11 @@ Rust's `char` is the most primitive alphabetic type.
 
 We specify `char` literals with single quotes.
     
-    - String literals use double quotes.
+- String literals use double quotes.
 
 `char` type is four bytes in size and represents a unicode scalar value.
     
-    - Can represent much more than ASCII. Accented letters; Chinese, Japanese, Korean characters; emoji; and zero-width spaces are all valid.
+- Can represent much more than ASCII. Accented letters; Chinese, Japanese, Korean characters; emoji; and zero-width spaces are all valid.
 
 ## Compound Types
 *Compound types* can group multiple values into one type. Rust has two primitive compound types: **tuples** and **arrays**.
@@ -174,7 +174,7 @@ We can also access a tuple element directly using `.` followed by the index of t
 
 The tuple without any elements has a special name: the **unit**. This value and its corresponding type are both written `()` and represent an empty value or an empty return type.
     
-    - Expressions implicitly return the unit value if they don't return any other value.
+- Expressions implicitly return the unit value if they don't return any other value.
 
 ### Array Type
 Unlike tuples, every element of an array must have the same type.
@@ -191,7 +191,7 @@ Arrays are useful when you want your data allocated on the stack rather than the
 
 Useful when you know the number of elements will not need to change.
     
-    - E.g. the names of the months:
+- E.g. the names of the months:
 
     fn main() {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
