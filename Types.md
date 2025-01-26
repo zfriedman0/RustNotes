@@ -19,7 +19,6 @@ In cases where it cannot, we must **annotate**:
 ### Integer Types
 A number without a fractional component.
 
-| ---------- | ---------- | ------------ |
 | **Length** | **Signed** | **Unsigned** |
 | ---------- | ---------- | ------------ |
 | 8-bit      | `i8`       | `u8`         |
