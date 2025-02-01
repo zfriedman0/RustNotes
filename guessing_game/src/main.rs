@@ -1,6 +1,6 @@
-use std::io; // Input/output library, allows user input.
 use rand::Rng; // `Rng` is a trait
 use std::cmp::Ordering;
+use std::io; // Input/output library, allows user input.
 
 fn main() {
     println!("Guess the number!");
@@ -8,7 +8,6 @@ fn main() {
     let secret_number = rand::thread_rng().gen_range(1..=100); // start..=end, inclusive on upper and lower bounds
 
     loop {
-
         println!("Please input your guess.");
 
         // `let` declares a variable
@@ -25,7 +24,8 @@ fn main() {
             .read_line(&mut guess) // Takes what user writes in stdin and assigns to guess. `&` indicates a reference.
             .expect("Failed to read line"); // Error handling, displays custom message on failure.
 
-        let guess: u32 = match guess.trim().parse() { // Shadowing, do this to convert variable from one type to another
+        let guess: u32 = match guess.trim().parse() {
+            // Shadowing, do this to convert variable from one type to another
             Ok(num) => num,
             Err(_) => continue, // _ is a catch-all value, matches all Err values. `continue` tells program to go to next iteration of the loop.
         };
